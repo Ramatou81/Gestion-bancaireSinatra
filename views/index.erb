@@ -1,0 +1,50 @@
+<% content_for :title do %>Gestion Bancaire<% end %>
+<style>
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  text-align: center;
+    color: #333;
+  }
+  p{
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+  }
+
+  .button-container { /* Nouveau conteneur pour les boutons */
+    display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si l'espace est insuffisant */
+    gap: 10px; /* Espacement entre les boutons */
+    margin-top: 30px;
+  }
+
+  .button-container button {
+    padding: 20px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+
+  .button-container button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<h1>Gestion Bancaire</h1>
+
+<p>Bienvenue !</p>
+
+<p>L'heure actuelle sur le serveur est : <%= @current_time %></p>
+
+<div class="button-container">
+  <button onclick="window.location.href='/users/new'">Créer un utilisateur</button>
+  <button onclick="window.location.href='/users'">Liste des utilisateurs</button>
+  <button onclick="window.location.href='/accounts/new'">Créer un compte</button>
+  <button onclick="window.location.href='/accounts'">Liste des comptes</button>
+  <button onclick="window.location.href='/search/accounts/by_user'">Rechercher comptes par utilisateur</button>
+  <button onclick="window.location.href='/search/accounts/by_id'">Rechercher compte par ID</button>
+</div>

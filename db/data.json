@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "d2cfea80-7f38-4eeb-968f-50dafbc23b8f",
+      "name": "Moussa"
+    },
+    {
+      "id": "baf39f77-df77-416f-817e-57d1e4a9c002",
+      "name": "Garba"
+    },
+    {
+      "id": "4429a678-19e9-4de3-a256-23e8bcd4bbeb",
+      "name": "ALI"
+    },
+    {
+      "id": "f8d685ee-188c-48b6-9ea4-1ea45b0249fd",
+      "name": "Mari"
+    },
+    {
+      "id": "855897b7-1853-4466-b83f-c739ad834509",
+      "name": "Sani"
+    },
+    {
+      "id": "d15d6d5a-c3a0-4999-8082-c41ef6875600",
+      "name": "Bibata"
+    },
+    {
+      "id": "745d24da-6dd0-42a6-aca6-94f33d2f7139",
+      "name": "Amina"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "20dc0aba-64e5-4ac3-ba45-ded98f8e494a",
+      "owner_id": "d2cfea80-7f38-4eeb-968f-50dafbc23b8f",
+      "state": 1,
+      "balance": 150000.0
+    },
+    {
+      "id": "4657b207-89b8-461a-beb6-9b457152f569",
+      "owner_id": "baf39f77-df77-416f-817e-57d1e4a9c002",
+      "state": 1,
+      "balance": 5100.0
+    },
+    {
+      "id": "0ce622d3-e252-4ca7-8ca9-ba718551a698",
+      "owner_id": "d2cfea80-7f38-4eeb-968f-50dafbc23b8f",
+      "state": 1,
+      "balance": 6000000.0
+    },
+    {
+      "id": "96cae508-b192-4b3f-a69a-bfa2ad9a98ad",
+      "owner_id": "f8d685ee-188c-48b6-9ea4-1ea45b0249fd",
+      "state": 0,
+      "balance": 0
+    },
+    {
+      "id": "ffcab687-bcd0-483e-b992-f338d2182a30",
+      "owner_id": "d15d6d5a-c3a0-4999-8082-c41ef6875600",
+      "state": 1,
+      "balance": 9450000.0
+    },
+    {
+      "id": "4df7750c-edeb-4815-a0a1-7b50ee77dcbf",
+      "owner_id": "855897b7-1853-4466-b83f-c739ad834509",
+      "state": 1,
+      "balance": 53500.0
+    },
+    {
+      "id": "11022ba5-2a3a-42c2-96c1-6a984a6da598",
+      "owner_id": "745d24da-6dd0-42a6-aca6-94f33d2f7139",
+      "state": 1,
+      "balance": 430000.0
+    }
+  ]
+}

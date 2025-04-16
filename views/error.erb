@@ -1,0 +1,25 @@
+<% content_for :title do %>Erreur<% end %>
+<style>
+  h1 {
+    color: #dc3545;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p.error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  p a:hover {
+    text-decoration: underline;
+  }
+</style>
+<h1>Erreur</h1>
+<p class="error"><%= @error %></p>
+<p><a href="/">Retour à l'accueil</a></p>

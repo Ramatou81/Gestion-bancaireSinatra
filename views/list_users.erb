@@ -1,0 +1,44 @@
+<% content_for :title do %>Liste des Utilisateurs<% end %>
+<style>
+  /* Styles spécifiques à la liste des utilisateurs */
+  h1 {
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover {
+    color: #007bff;
+  }
+  p a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    color: #333;
+  }
+  p a:hover {
+    background-color: #ddd;
+  }
+</style>
+<h1>Liste des Utilisateurs</h1>
+<ul>
+  <% @users.each do |user| %>
+    <li><a href="/users/<%= user.id %>"><%= user.name %></a></li>
+  <% end %>
+</ul>
+<p><a href="/users/new">Créer un nouvel utilisateur</a></p>
+<p><a href="/">Retour</a></p>

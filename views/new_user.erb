@@ -1,0 +1,8 @@
+
+<h1>Créer un Utilisateur</h1>
+<% if @error %> <p style="color:red;"><%= @error %></p> <% end %>
+<form action="/users/create" method="post">
+Nom: <input type="text" name="name" required><br><br>
+<input type="submit" value="Créer">
+</form>
+<p><a href="/">Retour</a></p>

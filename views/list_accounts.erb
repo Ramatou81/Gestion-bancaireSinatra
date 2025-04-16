@@ -1,0 +1,118 @@
+
+<% content_for :title do %>Liste des Comptes<% end %>
+<style>
+  h1 {
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  thead th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+  }
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 5px;
+  }
+  button.deactivate {
+    background-color: #dc3545; /* Rouge pour désactiver */
+    color: white;
+  }
+  button.deactivate:hover {
+    background-color: #c82333;
+  }
+  button.activate {
+    background-color: #28a745; /* Vert pour activer */
+    color: white;
+  }
+  button.activate:hover {
+    background-color: #1e7e34;
+  }
+  .action-links a {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 8px 12px;
+    background-color: #007bff; /* Bleu pour les liens d'action */
+    color: white;
+    border-radius: 4px;
+  }
+  .action-links a:hover {
+    background-color: #0056b3;
+  }
+  .inactive {
+    color: orange;
+    font-weight: bold;
+  }
+
+  /* ... (votre CSS actuel) ... */
+</style>
+<h1>Liste des Comptes</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Propriétaire</th>
+      <th>Solde</th>
+      <th>Statut</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><a href="/accounts/<%= account.id %>"><%= account.id %></a></td>
+        <td><a href="/users/<%= account.owner.id %>"><%= account.owner.name %></a></td>
+        <td><%= account.balance %></td>
+        <td class="<%= account.active? ? '' : 'inactive' %>"><%= account.active? ? 'Actif' : 'Inactif' %></td>
+        <td>
+          <% if account.active? %>
+            <form style="display:inline;" action="/accounts/<%= account.id %>/deactivate" method="post">
+              <button type="submit" class="deactivate">Désactiver</button>
+            </form>
+            <span class="action-links">
+              <a href="/accounts/<%= account.id %>/deposit">Déposer</a>
+              <a href="/accounts/<%= account.id %>/withdraw">Retirer</a>
+            </span>
+          <% else %>
+            <form style="display:inline;" action="/accounts/<%= account.id %>/activate" method="post">
+              <button type="submit" class="activate">Activer</button>
+            </form>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><a href="/accounts/new">Créer un nouveau compte</a></p>
+<p><a href="/">Retour</a></p>
+

@@ -1,0 +1,14 @@
+
+search_accounts_by_user.erb
+<h1>Rechercher les comptes par utilisateur</h1>
+<form action="/search/accounts/by_user" method="post">
+Utilisateur:
+<select name="user_id">
+    <% User.all.each do |user| %>
+    <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+</select><br><br>
+<input type="submit" value="Rechercher">
+</form>
+<p><a href="/accounts">Retour à la liste des comptes</a></p>
+<p><a href="/">Retour</a></p>

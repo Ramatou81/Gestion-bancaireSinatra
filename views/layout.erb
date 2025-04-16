@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Bancaire </title>
+
+  <title><%= yield :title %></title>
+  <style>
+    /* Styles CSS globaux que vous voulez sur toutes les pages */
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      /* Définir la couleur d'arrière-plan ici */
+      background-color:rgb(19, 171, 194); /* Exemple : AliceBlue (bleu très clair) */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff; /* Couleur de fond du conteneur principal */
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #007bff;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+    .error-page {
+      text-align: center;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .error-page h1 {
+      color: #dc3545;
+    }
+    .error-page a {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>
